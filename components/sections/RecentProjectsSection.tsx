@@ -79,7 +79,11 @@ function RecentProjectPreview({ project }: Readonly<{ project: RecentProject }>)
       rel={isExternal ? "noreferrer" : undefined}
       target={isExternal ? "_blank" : undefined}
     >
-      <article className="relative aspect-[1.78] min-h-[310px] overflow-hidden rounded-lg bg-bg-card md:aspect-[2.27] md:min-h-[420px]">
+      <article className="relative w-full overflow-hidden rounded-lg bg-bg-card
+        h-[420px]
+        sm:h-[380px]
+        md:h-[480px]
+        lg:h-[560px]">
         {project.imageUrl ? (
           <Image
             alt={project.title}
@@ -113,27 +117,27 @@ function RecentProjectPreview({ project }: Readonly<{ project: RecentProject }>)
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.72)_0%,rgba(0,0,0,0.22)_48%,rgba(0,0,0,0.72)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg-primary/80 to-transparent" />
 
-        <div className="absolute inset-0 grid place-items-center">
-          <span className="inline-flex items-center justify-center gap-sm rounded-sm bg-accent px-[30px] py-[18px] font-body text-[18px] leading-none font-semibold text-text-on-accent shadow-[0_12px_36px_rgba(0,0,0,0.28)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-accent-hover">
+        <div className="absolute inset-0 grid place-items-center px-lg">
+          <span className="inline-flex items-center justify-center gap-sm rounded-sm bg-accent px-[22px] py-[14px] font-body text-[15px] leading-none font-semibold whitespace-nowrap text-text-on-accent shadow-[0_12px_36px_rgba(0,0,0,0.28)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-accent-hover md:px-[30px] md:py-[18px] md:text-[18px]">
             View Project
             <ArrowUpRight aria-hidden="true" className="size-5" strokeWidth={2} />
           </span>
         </div>
 
-        <div className="absolute bottom-lg left-lg flex flex-wrap gap-md md:bottom-xl md:left-xl">
-          <span className="rounded-full bg-bg-primary/70 px-lg py-md font-body text-[14px] leading-none font-semibold text-text-primary backdrop-blur-md">
+        <div className="absolute bottom-lg left-lg flex max-w-[calc(100%-48px)] flex-wrap gap-sm md:bottom-xl md:left-xl md:gap-md">
+          <span className="rounded-full bg-bg-primary/70 px-md py-sm font-body text-[12px] leading-none font-semibold text-text-primary backdrop-blur-md md:px-lg md:py-md md:text-[14px]">
             {categoryLabels[project.category]}
           </span>
-          <span className="rounded-full bg-bg-primary/70 px-lg py-md font-body text-[14px] leading-none font-semibold text-text-primary backdrop-blur-md">
+          <span className="rounded-full bg-bg-primary/70 px-md py-sm font-body text-[12px] leading-none font-semibold text-text-primary backdrop-blur-md md:px-lg md:py-md md:text-[14px]">
             {formatProjectDate(project.date)}
           </span>
         </div>
 
         <h2
           className={cn(
-            "absolute right-lg bottom-lg max-w-[48%] text-right font-display",
-            "text-[clamp(40px,7vw,76px)] leading-none font-semibold tracking-[-0.06em] text-text-primary",
-            "md:right-xl md:bottom-xl"
+            "absolute right-lg bottom-[86px] left-lg font-display",
+            "text-[clamp(32px,12vw,48px)] leading-none font-semibold tracking-[-0.06em] text-text-primary",
+            "md:right-xl md:bottom-xl md:left-auto md:max-w-[48%] md:text-right md:text-[clamp(44px,7vw,76px)]"
           )}
         >
           {project.title}
@@ -162,13 +166,13 @@ export async function RecentProjectsSection() {
   }
 
   return (
-    <section id="recent-projects" className="bg-bg-primary py-4xl md:py-5xl">
+    <section id="recent-projects" className="bg-bg-primary py-3xl md:py-4xl lg:py-5xl">
       <div className="mx-auto w-full max-w-[1200px] px-lg md:px-4xl">
-        <div className="mb-2xl flex items-center justify-between gap-xl md:mb-[54px]">
+        <div className="mb-2xl flex flex-col items-start gap-md sm:flex-row sm:items-center sm:justify-between sm:gap-xl md:mb-[54px]">
           <SectionLabel className="mb-0" label="Recent Projects" />
 
           <Link
-            className="inline-flex items-center gap-sm font-body text-[15px] leading-none font-medium text-accent transition-colors duration-200 hover:text-accent-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary focus-visible:outline-none"
+            className="inline-flex items-center gap-sm font-body text-[14px] leading-none font-medium whitespace-nowrap text-accent transition-colors duration-200 hover:text-accent-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary focus-visible:outline-none md:text-[15px]"
             href="/projects"
           >
             Explore more Work

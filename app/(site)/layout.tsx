@@ -9,8 +9,10 @@ export default function SiteLayout({
   return (
     <>
       <Navbar />
-      {children}
-      <Footer />
+      <div className="bg-bg-primary">
+        {children}
+        <Footer />
+      </div>
     </>
   );
 }

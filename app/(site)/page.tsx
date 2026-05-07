@@ -1,6 +1,5 @@
 import { AboutSection } from "@/components/sections/AboutSection";
 import { BrandsTickerSection } from "@/components/sections/BrandsTickerSection";
-import { CtaSection } from "@/components/sections/CtaSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { FeaturedWorkSection } from "@/components/sections/FeaturedWorkSection";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -21,7 +20,6 @@ export default function Home() {
       <ServicesSection />
       <FeaturedWorkSection />
       <TestimonialsSection />
-      <CtaSection />
     </main>
   );
 }

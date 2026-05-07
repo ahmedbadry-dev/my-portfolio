@@ -5,16 +5,16 @@ export function CtaSection() {
   return (
     <section
       id="cta"
-      className="relative overflow-hidden border-t border-border bg-bg-primary py-4xl md:py-5xl"
+      className="relative isolate overflow-hidden bg-bg-primary pt-[112px] pb-[128px] md:pt-[126px] md:pb-[148px]"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_11%_75%,rgba(245,196,0,0.11)_0%,transparent_42%),radial-gradient(ellipse_at_55%_0%,rgba(245,196,0,0.06)_0%,transparent_44%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,196,0,0.035)_0%,transparent_30%,rgba(245,196,0,0.025)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_11%_83%,rgba(245,196,0,0.12)_0%,rgba(245,196,0,0.055)_22%,transparent_48%),radial-gradient(ellipse_at_48%_0%,rgba(245,196,0,0.045)_0%,transparent_52%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(245,196,0,0.035)_0%,transparent_32%,rgba(0,0,0,0.34)_100%)]" />
 
-      <div className="relative mx-auto w-full max-w-[1200px] px-lg md:px-4xl">
-        <div className="grid gap-2xl lg:grid-cols-[minmax(0,720px)_minmax(240px,1fr)] lg:items-center">
+      <div className="mx-auto w-full max-w-[1200px] px-lg md:px-4xl">
+        <div className="grid gap-2xl lg:grid-cols-[minmax(0,720px)_minmax(240px,1fr)] lg:items-start">
           <div>
             <SectionLabel label="Got a project?" />
-            <h2 className="max-w-[720px] font-display text-[clamp(54px,8vw,86px)] leading-[1.03] font-semibold tracking-[-0.065em] text-text-primary">
+            <h2 className="max-w-[720px] font-display text-[clamp(56px,8.4vw,88px)] leading-[1.03] font-semibold tracking-[-0.07em] text-text-primary">
               Surround yourself with an expert
             </h2>
             <p className="mt-lg max-w-[560px] font-body text-[16px] leading-[1.6] font-normal text-text-secondary">
@@ -23,13 +23,13 @@ export function CtaSection() {
             </p>
           </div>
 
-          <div className="lg:flex lg:justify-end lg:pt-[58px]">
+          <div className="lg:flex lg:justify-end lg:pt-[116px]">
             <YellowButton
-              className="px-[32px] py-[17px] text-[17px]"
+              className="rounded-sm px-[28px] py-[17px] text-[17px]"
               href="/#contact"
               variant="external"
             >
-              Start a Project
+              Start a Project Now
             </YellowButton>
           </div>
         </div>
