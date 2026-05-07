@@ -1,0 +1,17 @@
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier";
+
+const eslintConfig = [
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  prettier,
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": "error",
+      "no-console": "warn"
+    }
+  }
+];
+
+export default eslintConfig;
