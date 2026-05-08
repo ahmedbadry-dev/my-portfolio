@@ -11,7 +11,7 @@ const footerPrimaryLinks = [
   { label: "Home", href: "/" },
   { label: "About Me", href: "/#about" },
   { label: "Services", href: "/#services" },
-  { label: "Projects", href: "/projects" },
+  { label: "Projects", href: "/#projects" },
   { label: "Contact", href: "/#contact" }
 ] as const;
 

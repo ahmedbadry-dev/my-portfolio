@@ -66,11 +66,11 @@ export async function BrandsTickerSection() {
   if (!brands.length) {
     return null;
   }
-  const marqueeBrands = [...brands, ...brands] as readonly Brand[];
+  const marqueeBrands = [...brands, ...brands, ...brands, ...brands] as readonly Brand[];
 
   return (
     <section aria-label="Brand collaborations" className="overflow-hidden bg-bg-ticker">
-      <div className="flex min-h-[128px] w-max animate-[testimonials-marquee_30s_linear_infinite] items-center hover:[animation-play-state:paused] motion-reduce:animate-none md:min-h-[136px]">
+      <div className="flex min-h-[128px] w-max animate-[brands-marquee_30s_linear_infinite] items-center hover:[animation-play-state:paused] motion-reduce:animate-none md:min-h-[136px]">
         {marqueeBrands.map((brand, index) => (
           <BrandItem brand={brand} key={`${brand.name}-${index}`} />
         ))}

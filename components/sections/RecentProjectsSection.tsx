@@ -22,7 +22,7 @@ const fallbackProject: RecentProject = {
   title: "LuminUI",
   category: "ui-ux",
   date: "2025-08-18",
-  url: "/projects"
+  url: "/#projects"
 };
 
 const categoryLabels = {
@@ -44,7 +44,7 @@ function toRecentProject(project: Project): RecentProject {
 }
 
 function getProjectHref(project: RecentProject) {
-  return project.url ?? "/projects";
+  return project.url ?? "/#projects";
 }
 
 function formatProjectDate(date: string) {
@@ -173,7 +173,7 @@ export async function RecentProjectsSection() {
 
           <Link
             className="inline-flex items-center gap-sm font-body text-[14px] leading-none font-medium whitespace-nowrap text-accent transition-colors duration-200 hover:text-accent-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary focus-visible:outline-none md:text-[15px]"
-            href="/projects"
+            href="/#projects"
           >
             Explore more Work
             <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />

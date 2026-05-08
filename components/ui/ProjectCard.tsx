@@ -27,13 +27,13 @@ const categoryLabels = {
 } satisfies Record<ProjectCategory, string>;
 
 function getProjectHref(project: ProjectCardProject) {
-  return project.url ?? "/projects";
+  return project.url ?? "/#projects";
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const href = getProjectHref(project);
   const isExternal = href.startsWith("http");
-  const isAccentTitle = index === 3;
+
 
   return (
     <article className="group">
@@ -85,19 +85,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <span className="absolute top-md left-md rounded-full border border-border bg-bg-primary/70 px-md py-sm font-body text-[12px] leading-none font-medium text-text-primary opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
             {categoryLabels[project.category]}
           </span>
+
         </div>
 
         <div className="mt-lg">
-          <div className="mb-sm flex flex-wrap gap-sm">
-            <span className="rounded-full border border-border bg-bg-card px-md py-xs font-body text-[12px] leading-none font-medium text-text-secondary">
-              {categoryLabels[project.category]}
-            </span>
-          </div>
           <h3
-            className={cn(
-              "font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.05em] transition-colors duration-300 group-hover:text-accent md:text-[clamp(28px,4vw,38px)]",
-              isAccentTitle ? "text-accent" : "text-text-primary"
-            )}
+            className="font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.05em] text-text-primary transition-colors duration-300 group-hover:text-accent md:text-[clamp(28px,4vw,38px)]"
           >
             {project.title}
           </h3>

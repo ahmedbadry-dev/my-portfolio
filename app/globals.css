@@ -88,12 +88,30 @@ select {
   font: inherit;
 }
 
-@keyframes testimonials-marquee {
+@keyframes marquee {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
+    -webkit-transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -o-transform: translateX(-25%);
+  }
+}
+
+@keyframes brands-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-25%);
+    -webkit-transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -o-transform: translateX(-25%);
   }
 }

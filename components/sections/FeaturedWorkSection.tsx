@@ -1,9 +1,15 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import { ProjectCard, type ProjectCardProject } from "@/components/ui/ProjectCard";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { YellowButton } from "@/components/ui/YellowButton";
-import { sanityFetch } from "@/sanity/lib/client";
-import { FEATURED_PROJECTS_QUERY } from "@/sanity/lib/queries";
+import { client } from "@/sanity/lib/client";
+import { PROJECTS_QUERY } from "@/sanity/lib/queries";
 import type { Project } from "@/types/sanity";
+
+const PROJECTS_PER_PAGE = 4;
 
 const fallbackProjects: readonly ProjectCardProject[] = [
   {
@@ -47,31 +53,49 @@ function toProjectCardProject(project: Project): ProjectCardProject {
   };
 }
 
-export async function FeaturedWorkSection() {
-  const projectsResult = await sanityFetch<readonly Project[] | undefined>({
-    query: FEATURED_PROJECTS_QUERY,
-    tags: ["project"]
-  });
+export function FeaturedWorkSection() {
+  const [projects, setProjects] = useState<readonly ProjectCardProject[] | null>(null);
+  const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
 
-  const projects = projectsResult?.length
-    ? projectsResult.slice(0, 4).map(toProjectCardProject)
-    : process.env.NODE_ENV !== "production"
-      ? fallbackProjects
-      : [];
+  useEffect(() => {
+    let isMounted = true;
 
-  if (!projects.length) {
+    async function fetchProjects() {
+      try {
+        const projectsResult = await client.fetch<readonly Project[]>(PROJECTS_QUERY);
+
+        if (isMounted) {
+          setProjects(projectsResult.map(toProjectCardProject));
+        }
+      } catch {
+        if (isMounted) {
+          setProjects(process.env.NODE_ENV !== "production" ? fallbackProjects : []);
+        }
+      }
+    }
+
+    void fetchProjects();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const resolvedProjects =
+    projects ?? (process.env.NODE_ENV !== "production" ? fallbackProjects : []);
+  const visibleProjects = resolvedProjects.slice(0, visibleCount);
+  const hasMoreProjects = visibleCount < resolvedProjects.length;
+
+  if (!resolvedProjects.length) {
     return null;
   }
 
   return (
-    <section id="work" className="bg-bg-primary py-4xl md:py-5xl">
+    <section id="projects" className="bg-bg-primary py-4xl md:py-5xl">
       <div className="mx-auto w-full max-w-[1200px] px-lg md:px-4xl">
         <div className="grid gap-2xl md:grid-cols-[300px_minmax(0,1fr)] md:gap-3xl">
           <div>
             <SectionLabel label="Featured Work" />
-            <YellowButton className="mt-[46px]" href="/projects" variant="external">
-              Explore all Projects
-            </YellowButton>
           </div>
 
           <div>
@@ -86,10 +110,20 @@ export async function FeaturedWorkSection() {
         </div>
 
         <div className="mt-3xl grid gap-x-lg gap-y-3xl md:mt-[92px] md:grid-cols-2 md:gap-x-xl md:gap-y-[84px]">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <ProjectCard index={index} key={project._id} project={project} />
           ))}
         </div>
+
+        {hasMoreProjects && (
+          <div className="mt-3xl flex justify-center">
+            <YellowButton
+              onClick={() => setVisibleCount((current) => current + PROJECTS_PER_PAGE)}
+            >
+              Load More
+            </YellowButton>
+          </div>
+        )}
       </div>
     </section>
   );
