@@ -8,8 +8,16 @@ import { RecentProjectsSection } from "@/components/sections/RecentProjectsSecti
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TestimonialsBar } from "@/components/sections/TestimonialsBar";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { sanityFetch } from "@/sanity/lib/client";
+import { CERTIFICATES_QUERY } from "@/sanity/lib/queries";
+import type { Certificate } from "@/types/sanity";
 
-export default function Home() {
+export default async function Home() {
+  const certificates = await sanityFetch<readonly Certificate[] | undefined>({
+    query: CERTIFICATES_QUERY,
+    tags: ["certificate"]
+  });
+
   return (
     <main>
       <HeroSection />
@@ -17,7 +25,7 @@ export default function Home() {
       <RecentProjectsSection />
       <AboutSection />
       <EducationSection />
-      <CertificatesSection />
+      <CertificatesSection certificates={certificates ?? []} />
       <BrandsTickerSection />
       <ServicesSection />
       <FeaturedWorkSection />
