@@ -55,6 +55,15 @@ export type Education = Readonly<{
   order: number;
 }>;
 
+export type Certificate = Readonly<{
+  _id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  imageUrl?: string;
+  aspectRatio?: number;
+}>;
+
 export type Project = Readonly<{
   _id: string;
   title: string;

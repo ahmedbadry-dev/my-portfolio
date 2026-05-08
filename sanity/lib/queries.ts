@@ -51,6 +51,17 @@ export const EDUCATION_QUERY = groq`
   }
 `;
 
+export const CERTIFICATES_QUERY = groq`
+  *[_type == "certificate"] | order(date desc) {
+    _id,
+    title,
+    issuer,
+    date,
+    "imageUrl": image.asset->url,
+    "aspectRatio": image.asset->metadata.dimensions.aspectRatio
+  }
+`;
+
 export const PROJECTS_QUERY = groq`
   *[_type == "project"] | order(order asc, date desc) {
     _id,
