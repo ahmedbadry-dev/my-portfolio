@@ -99,9 +99,9 @@ function RecentProjectPreview({ project }: Readonly<{ project: RecentProject }>)
             className="absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_55%_36%,rgba(255,255,255,0.18)_0%,transparent_24%),linear-gradient(128deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.18)_44%,rgba(255,255,255,0.06)_100%)] grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
             role="img"
           >
-            <div className="absolute -top-[18%] left-[7%] h-[82%] w-[55%] rotate-[-10deg] rounded-md border border-white/15 bg-bg-primary/45 shadow-[0_44px_100px_rgba(0,0,0,0.72)]">
+            <div className="absolute top-[-18%] left-[7%] h-[82%] w-[55%] rotate-[-10deg] rounded-md border border-white/15 bg-bg-primary/45 shadow-[0_44px_100px_rgba(0,0,0,0.72)]">
               <div className="absolute inset-x-[9%] top-[13%] h-[18%] rounded-xs bg-white/10" />
-              <div className="absolute top-[19%] left-[13%] font-display text-[clamp(32px,5vw,66px)] leading-[0.95] font-semibold tracking-[-0.06em] text-white/65">
+              <div className="absolute top-[19%] left-[13%] font-display text-[22px] leading-[0.95] font-semibold tracking-[-0.06em] text-white/65 md:text-[clamp(32px,5vw,66px)]">
                 M-Mockups:
                 <br />
                 MacBook Air
@@ -118,7 +118,7 @@ function RecentProjectPreview({ project }: Readonly<{ project: RecentProject }>)
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg-primary/80 to-transparent" />
 
         <div className="absolute inset-0 grid place-items-center px-lg">
-          <span className="inline-flex items-center justify-center gap-sm rounded-sm bg-accent px-[22px] py-[14px] font-body text-[15px] leading-none font-semibold whitespace-nowrap text-text-on-accent shadow-[0_12px_36px_rgba(0,0,0,0.28)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-accent-hover md:px-[30px] md:py-[18px] md:text-[18px]">
+          <span className="inline-flex items-center justify-center gap-sm rounded-sm bg-accent px-[22px] py-[14px] font-body text-[14px] leading-none font-semibold whitespace-nowrap text-text-on-accent shadow-[0_12px_36px_rgba(0,0,0,0.28)] transition duration-300 group-hover:-translate-y-1 group-hover:bg-accent-hover md:px-[30px] md:py-[18px] md:text-[18px]">
             View Project
             <ArrowUpRight aria-hidden="true" className="size-5" strokeWidth={2} />
           </span>
@@ -136,7 +136,7 @@ function RecentProjectPreview({ project }: Readonly<{ project: RecentProject }>)
         <h2
           className={cn(
             "absolute right-lg bottom-[86px] left-lg font-display",
-            "text-[clamp(32px,12vw,48px)] leading-none font-semibold tracking-[-0.06em] text-text-primary",
+            "text-[32px] leading-none font-semibold tracking-[-0.06em] text-text-primary",
             "md:right-xl md:bottom-xl md:left-auto md:max-w-[48%] md:text-right md:text-[clamp(44px,7vw,76px)]"
           )}
         >

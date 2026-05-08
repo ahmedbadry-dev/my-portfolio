@@ -92,7 +92,7 @@ export async function TestimonialsSection() {
     <section id="testimonials" className="relative overflow-hidden bg-bg-primary py-4xl md:py-5xl">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-[56%] left-1/2 -z-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-[clamp(120px,22vw,260px)] leading-none font-semibold tracking-[0.02em] text-transparent opacity-70 [-webkit-text-stroke:1px_var(--color-border-strong)]"
+        className="pointer-events-none absolute top-[56%] left-1/2 -z-0 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-[32px] leading-none font-semibold tracking-[0.02em] text-transparent opacity-70 [-webkit-text-stroke:1px_var(--color-border-strong)] md:text-[clamp(120px,22vw,260px)]"
       >
         TESTIMONIALS
       </div>
@@ -104,7 +104,7 @@ export async function TestimonialsSection() {
               <TrustAvatar index={index} key={testimonial._id} testimonial={testimonial} />
             ))}
           </div>
-          <p className="mt-lg text-center font-body text-[20px] leading-none font-normal tracking-[-0.03em] text-text-primary">
+          <p className="mt-lg text-center font-body text-[16px] leading-none font-normal tracking-[-0.03em] text-text-primary md:text-[20px]">
             Trusted 18,000+ Satisfied Clients
           </p>
         </div>

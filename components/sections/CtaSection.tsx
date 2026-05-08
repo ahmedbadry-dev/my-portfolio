@@ -14,7 +14,7 @@ export function CtaSection() {
         <div className="grid gap-2xl lg:grid-cols-[minmax(0,720px)_minmax(240px,1fr)] lg:items-start">
           <div>
             <SectionLabel label="Got a project?" />
-            <h2 className="max-w-[720px] font-display text-[clamp(56px,8.4vw,88px)] leading-[1.03] font-semibold tracking-[-0.07em] text-text-primary">
+            <h2 className="max-w-[720px] font-display text-[32px] leading-[1.03] font-semibold tracking-[-0.07em] text-text-primary md:text-[clamp(56px,8.4vw,88px)]">
               Surround yourself with an expert
             </h2>
             <p className="mt-lg max-w-[560px] font-body text-[16px] leading-[1.6] font-normal text-text-secondary">
@@ -25,7 +25,7 @@ export function CtaSection() {
 
           <div className="lg:flex lg:justify-end lg:pt-[116px]">
             <YellowButton
-              className="rounded-sm px-[28px] py-[17px] text-[17px]"
+              className="rounded-sm px-[28px] py-[17px] text-[14px] md:text-[17px]"
               href="/#contact"
               variant="external"
             >

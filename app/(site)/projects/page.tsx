@@ -88,7 +88,7 @@ export default async function ProjectsPage() {
           </div>
 
           <div>
-            <h1 className="max-w-[650px] font-display text-[clamp(48px,6vw,76px)] leading-[1.05] font-semibold tracking-[-0.055em] text-text-primary">
+            <h1 className="max-w-[650px] font-display text-[32px] leading-[1.05] font-semibold tracking-[-0.055em] text-text-primary md:text-[clamp(48px,6vw,76px)]">
               Explore the Complete Project Archive
             </h1>
             <p className="mt-lg max-w-[600px] font-body text-[16px] leading-[1.6] font-normal text-text-secondary">

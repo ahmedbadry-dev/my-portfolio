@@ -76,7 +76,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           <div className="absolute inset-0 bg-bg-overlay opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           <div className="absolute inset-0 grid place-items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <span className="inline-flex items-center justify-center gap-sm rounded-full bg-accent px-[28px] py-[14px] font-body text-[15px] leading-none font-semibold text-text-on-accent">
+            <span className="inline-flex items-center justify-center gap-sm rounded-full bg-accent px-[24px] py-[13px] font-body text-[14px] leading-none font-semibold text-text-on-accent md:px-[28px] md:py-[14px] md:text-[15px]">
               View Project
               <ArrowUpRight aria-hidden="true" className="size-4" strokeWidth={2} />
             </span>
@@ -95,13 +95,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
           <h3
             className={cn(
-              "font-display text-[clamp(28px,4vw,38px)] leading-[1.05] font-semibold tracking-[-0.05em] transition-colors duration-300 group-hover:text-accent",
+              "font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.05em] transition-colors duration-300 group-hover:text-accent md:text-[clamp(28px,4vw,38px)]",
               isAccentTitle ? "text-accent" : "text-text-primary"
             )}
           >
             {project.title}
           </h3>
-          <p className="mt-md max-w-[470px] font-body text-[15px] leading-[1.5] font-normal text-text-secondary">
+          <p className="mt-md max-w-[470px] font-body text-[14px] leading-[1.5] font-normal text-text-secondary md:text-[15px]">
             {project.description}
           </p>
         </div>

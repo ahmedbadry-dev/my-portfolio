@@ -27,7 +27,7 @@ function BrandItem({ brand }: BrandItemProps) {
       width={150}
     />
   ) : (
-    <span className="font-display text-[24px] leading-none font-bold tracking-[-0.035em] text-text-secondary opacity-70 transition duration-300 hover:text-text-primary hover:opacity-100">
+    <span className="font-display text-[22px] leading-none font-bold tracking-[-0.035em] text-text-secondary opacity-70 transition duration-300 hover:text-text-primary hover:opacity-100 md:text-[24px]">
       {brand.name}
     </span>
   );

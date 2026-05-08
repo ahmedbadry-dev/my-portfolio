@@ -44,10 +44,10 @@ export function ServiceCard({ service, index, isOpen, onToggle }: ServiceCardPro
         type="button"
       >
         <span className="min-w-0">
-          <span className="mb-md block font-body text-[15px] leading-none font-normal tracking-[-0.02em] text-text-secondary md:text-[16px]">
+          <span className="mb-md block font-body text-[14px] leading-none font-normal tracking-[-0.02em] text-text-secondary md:text-[16px]">
             {service.subtitle}
           </span>
-          <span className="block font-display text-[clamp(28px,4vw,38px)] leading-[1.05] font-semibold tracking-[-0.045em] text-text-primary">
+          <span className="block font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.045em] text-text-primary md:text-[clamp(28px,4vw,38px)]">
             {service.title}
           </span>
         </span>
@@ -83,7 +83,7 @@ export function ServiceCard({ service, index, isOpen, onToggle }: ServiceCardPro
           >
             <div className="grid gap-xl px-lg pb-xl md:grid-cols-[minmax(0,1fr)_280px_54px] md:items-center md:px-xl">
               <div>
-                <p className="max-w-[560px] font-body text-[15px] leading-[1.55] font-normal text-text-secondary md:text-[16px]">
+                <p className="max-w-[560px] font-body text-[14px] leading-[1.55] font-normal text-text-secondary md:text-[16px]">
                   {service.description}
                 </p>
 
@@ -91,7 +91,7 @@ export function ServiceCard({ service, index, isOpen, onToggle }: ServiceCardPro
                   <ul className="mt-lg grid gap-md sm:grid-cols-2">
                     {skills.map((skill) => (
                       <li
-                        className="flex items-center gap-sm font-body text-[13px] leading-none font-medium text-text-primary"
+                        className="flex items-center gap-sm font-body text-[12px] leading-none font-medium text-text-primary md:text-[13px]"
                         key={skill}
                       >
                         <span aria-hidden="true" className="text-accent">
@@ -117,7 +117,7 @@ export function ServiceCard({ service, index, isOpen, onToggle }: ServiceCardPro
                   </div>
                 ) : (
                   <div className="grid h-[190px] place-items-center rounded-md border border-border bg-bg-card">
-                    <span className="font-display text-[64px] leading-none font-semibold tracking-[-0.06em] text-accent">
+                    <span className="font-display text-[32px] leading-none font-semibold tracking-[-0.06em] text-accent md:text-[64px]">
                       {(index + 1).toString().padStart(2, "0")}
                     </span>
                   </div>

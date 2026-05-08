@@ -33,7 +33,7 @@ export function YellowButton({
   const Icon = iconByVariant[variant];
   const classes = cn(
     "inline-flex items-center justify-center gap-sm rounded-full bg-accent px-[28px] py-[14px]",
-    "font-body text-[15px] leading-none font-semibold text-text-on-accent",
+    "font-body text-[14px] leading-none font-semibold text-text-on-accent md:text-[15px]",
     "shadow-none transition-all duration-200 ease-out",
     "hover:-translate-y-px hover:bg-accent-hover hover:shadow-[0_8px_24px_rgba(245,196,0,0.3)]",
     "active:translate-y-0 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary focus-visible:outline-none",

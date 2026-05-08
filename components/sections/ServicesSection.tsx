@@ -101,7 +101,7 @@ export async function ServicesSection() {
           </div>
 
           <div>
-            <h2 className="max-w-[650px] font-display text-[clamp(40px,5vw,58px)] leading-[1.15] font-semibold tracking-[-0.045em] text-text-primary">
+            <h2 className="max-w-[650px] font-display text-[32px] leading-[1.15] font-semibold tracking-[-0.045em] text-text-primary md:text-[clamp(40px,5vw,58px)]">
               Experience the Impact of User-Centered Design
             </h2>
             <p className="mt-lg max-w-[610px] font-body text-[16px] leading-[1.55] font-normal text-text-secondary">

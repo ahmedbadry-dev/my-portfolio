@@ -46,7 +46,7 @@ export function Footer() {
             <div>
               <SectionLabel label="Got a project?" />
               <h2
-                className="max-w-[720px] font-display text-[clamp(56px,8.4vw,88px)] leading-[1.03] font-semibold tracking-[-0.07em] text-text-primary"
+                className="max-w-[720px] font-display text-[32px] leading-[1.03] font-semibold tracking-[-0.07em] text-text-primary md:text-[clamp(56px,8.4vw,88px)]"
                 id="footer-cta-heading"
               >
                 Surround yourself with an expert
@@ -59,7 +59,7 @@ export function Footer() {
 
             <div className="lg:flex lg:justify-end lg:pt-[116px]">
               <YellowButton
-                className="rounded-sm px-[28px] py-[17px] text-[17px]"
+                className="rounded-sm px-[28px] py-[17px] text-[14px] md:text-[17px]"
                 href="/#contact"
                 variant="external"
               >
@@ -75,7 +75,7 @@ export function Footer() {
               {footerPrimaryLinks.map((link, index) => (
                 <Link
                   className={cn(
-                    "font-body text-[15px] leading-none font-medium text-text-secondary transition-colors duration-200 hover:text-text-primary",
+                    "font-body text-[14px] leading-none font-medium text-text-secondary transition-colors duration-200 hover:text-text-primary md:text-[15px]",
                     index === 0 && "text-accent"
                   )}
                   href={link.href}
@@ -89,7 +89,7 @@ export function Footer() {
             <nav aria-label="Footer utility navigation" className="flex flex-wrap gap-x-xl gap-y-md">
               {footerUtilityLinks.map((link) => (
                 <Link
-                  className="font-body text-[15px] leading-none font-normal text-text-secondary transition-colors duration-200 hover:text-text-primary"
+                  className="font-body text-[14px] leading-none font-normal text-text-secondary transition-colors duration-200 hover:text-text-primary md:text-[15px]"
                   href={link.href}
                   key={link.href}
                 >
@@ -105,7 +105,7 @@ export function Footer() {
                 aria-label={social.label}
                 className={cn(
                   "grid size-11 place-items-center rounded-full border border-border bg-bg-elevated/90",
-                  "font-body text-[15px] font-semibold text-text-primary shadow-[inset_0_8px_18px_rgba(255,255,255,0.04)]",
+                  "font-body text-[14px] font-semibold text-text-primary shadow-[inset_0_8px_18px_rgba(255,255,255,0.04)] md:text-[15px]",
                   "transition-colors duration-200 hover:border-border-hover hover:bg-bg-card focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary focus-visible:outline-none"
                 )}
                 href={social.href}
@@ -124,7 +124,7 @@ export function Footer() {
             <span className="grid size-8 place-items-center rounded-full bg-accent text-[11px] font-bold text-text-on-accent ring-2 ring-bg-primary">
               AB
             </span>
-            <span className="font-display text-[22px] leading-none font-semibold tracking-[-0.03em] text-text-primary">
+            <span className="font-display text-[18px] leading-none font-semibold tracking-[-0.03em] text-text-primary md:text-[22px]">
               PortFoliyo
             </span>
           </Link>

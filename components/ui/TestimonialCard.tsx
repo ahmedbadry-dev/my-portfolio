@@ -24,12 +24,12 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <article className="relative rounded-lg border border-border bg-bg-primary/90 px-lg py-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] md:px-xl md:py-[30px]">
       <blockquote>
-        <p className="font-body text-[17px] leading-[1.45] font-normal tracking-[-0.01em] text-accent italic">
+        <p className="font-body text-[16px] leading-[1.45] font-normal tracking-[-0.01em] text-accent italic md:text-[17px]">
           &quot;{testimonial.quote}&quot;
         </p>
       </blockquote>
 
-      <p className="mt-md max-w-[430px] font-body text-[15px] leading-[1.55] font-normal text-text-secondary">
+      <p className="mt-md max-w-[430px] font-body text-[14px] leading-[1.55] font-normal text-text-secondary md:text-[15px]">
         {testimonial.quote}
       </p>
 
@@ -44,7 +44,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
               src={testimonial.avatarUrl}
             />
           ) : (
-            <div className="grid h-full place-items-center bg-[radial-gradient(circle_at_34%_24%,rgba(245,196,0,0.28)_0%,transparent_38%),var(--color-bg-elevated)] font-body text-[13px] font-semibold text-text-primary">
+            <div className="grid h-full place-items-center bg-[radial-gradient(circle_at_34%_24%,rgba(245,196,0,0.28)_0%,transparent_38%),var(--color-bg-elevated)] font-body text-[12px] font-semibold text-text-primary md:text-[13px]">
               {getInitials(testimonial.author)}
             </div>
           )}
@@ -63,7 +63,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
       <span
         aria-hidden="true"
         className={cn(
-          "absolute right-lg bottom-lg font-display text-[64px] leading-none font-semibold",
+          "absolute right-lg bottom-lg font-display text-[32px] leading-none font-semibold md:text-[64px]",
           "text-text-secondary/80 md:right-xl md:bottom-xl"
         )}
       >

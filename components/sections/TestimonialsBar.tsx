@@ -25,7 +25,10 @@ function StarRating({ rating }: Readonly<{ rating: number }>) {
   const stars = Array.from({ length: Math.min(Math.max(rating, 1), 5) }, (_, index) => index);
 
   return (
-    <div aria-hidden="true" className="mb-sm flex gap-[4px] text-[15px] leading-none text-accent">
+    <div
+      aria-hidden="true"
+      className="mb-sm flex gap-[4px] text-[14px] leading-none text-accent md:text-[15px]"
+    >
       {stars.map((star) => (
         <span key={star}>★</span>
       ))}

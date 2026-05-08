@@ -48,10 +48,10 @@ function EducationCard({ education }: EducationCardProps) {
     <article className="border-b border-border px-lg py-xl last:border-b-0 md:px-xl md:py-xl">
       <div className="flex flex-col gap-md sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h3 className="font-display text-[clamp(24px,3vw,30px)] leading-[1.05] font-semibold tracking-[-0.035em] text-text-primary">
+          <h3 className="font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.035em] text-text-primary md:text-[clamp(24px,3vw,30px)]">
             {education.degree}
           </h3>
-          <p className="mt-sm font-body text-[15px] leading-none font-normal text-text-secondary">
+          <p className="mt-sm font-body text-[14px] leading-none font-normal text-text-secondary md:text-[15px]">
             {education.institution}
           </p>
         </div>

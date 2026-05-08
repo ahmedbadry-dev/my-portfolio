@@ -66,10 +66,10 @@ export async function ExperienceSection() {
               >
                 <div className="flex flex-col gap-md sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <h3 className="font-display text-[clamp(25px,3vw,32px)] leading-[1.05] font-semibold tracking-[-0.035em] text-text-primary">
+                    <h3 className="font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.035em] text-text-primary md:text-[clamp(25px,3vw,32px)]">
                       {experience.role}
                     </h3>
-                    <p className="mt-sm font-body text-[15px] leading-none text-text-secondary">
+                    <p className="mt-sm font-body text-[14px] leading-none text-text-secondary md:text-[15px]">
                       At {experience.company}
                     </p>
                   </div>
@@ -81,7 +81,7 @@ export async function ExperienceSection() {
                   />
                 </div>
 
-                <p className="mt-md max-w-[590px] font-body text-[15px] leading-[1.55] text-text-secondary">
+                <p className="mt-md max-w-[590px] font-body text-[14px] leading-[1.55] text-text-secondary md:text-[15px]">
                   {experience.description}
                 </p>
               </article>

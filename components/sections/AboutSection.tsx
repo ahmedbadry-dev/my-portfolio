@@ -125,10 +125,10 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
     <article className="border-b border-border px-lg py-xl first:border-t md:px-xl md:py-xl">
       <div className="flex flex-col gap-md sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h3 className="font-display text-[clamp(24px,3vw,30px)] leading-[1.05] font-semibold tracking-[-0.035em] text-text-primary">
+          <h3 className="font-display text-[22px] leading-[1.05] font-semibold tracking-[-0.035em] text-text-primary md:text-[clamp(24px,3vw,30px)]">
             {experience.role}
           </h3>
-          <p className="mt-sm font-body text-[15px] leading-none text-text-secondary">
+          <p className="mt-sm font-body text-[14px] leading-none text-text-secondary md:text-[15px]">
             {formatCompany(experience.company)}
           </p>
         </div>
@@ -169,7 +169,7 @@ function ProfileCard({ siteConfig }: ProfileCardProps) {
         ) : (
           <div
             aria-label={`${siteConfig.name} portrait`}
-            className="grid h-full place-items-center bg-[radial-gradient(circle_at_34%_24%,rgba(245,196,0,0.22)_0%,transparent_42%),var(--color-bg-card)] font-display text-[64px] font-semibold text-text-primary"
+            className="grid h-full place-items-center bg-[radial-gradient(circle_at_34%_24%,rgba(245,196,0,0.22)_0%,transparent_42%),var(--color-bg-card)] font-display text-[32px] font-semibold text-text-primary md:text-[64px]"
             role="img"
           >
             {siteConfig.name
@@ -236,10 +236,10 @@ function ContactTable({ siteConfig }: ContactTableProps) {
             className="grid grid-cols-[110px_1fr] items-center border-b border-border px-lg py-md last:border-b-0 md:grid-cols-[140px_1fr] md:px-lg"
             key={row.label}
           >
-            <span className="font-body text-[15px] leading-none text-text-secondary">
+            <span className="font-body text-[14px] leading-none text-text-secondary md:text-[15px]">
               {row.label}
             </span>
-            <span className="text-right font-body text-[18px] leading-[1.2] font-medium text-text-primary">
+            <span className="text-right font-body text-[16px] leading-[1.2] font-medium text-text-primary md:text-[18px]">
               {row.value}
             </span>
           </div>
@@ -280,7 +280,7 @@ export async function AboutSection() {
         <div className="grid gap-3xl lg:grid-cols-[minmax(0,595px)_minmax(320px,360px)] lg:items-start lg:gap-3xl">
           <div className="w-full">
             <SectionLabel label="About Me" />
-            <h2 className="max-w-[560px] font-display text-[clamp(40px,5vw,58px)] leading-[1.16] font-semibold tracking-[-0.045em] text-text-primary">
+            <h2 className="max-w-[560px] font-display text-[32px] leading-[1.16] font-semibold tracking-[-0.045em] text-text-primary md:text-[clamp(40px,5vw,58px)]">
               Passionate &amp; Lead Product Designer
             </h2>
             <p className="mt-md max-w-[560px] font-body text-[16px] leading-[1.55] font-normal text-text-secondary">
