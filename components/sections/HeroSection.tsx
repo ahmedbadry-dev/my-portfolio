@@ -1,4 +1,5 @@
-import heroReference from "@/design-references/01_hero.jpg";
+import Image from "next/image";
+
 import { sanityFetch } from "@/sanity/lib/client";
 import { SITE_CONFIG_QUERY } from "@/sanity/lib/queries";
 import type { SiteConfig } from "@/types/sanity";
@@ -18,6 +19,7 @@ export async function HeroSection() {
   const name = siteConfig?.name || fallbackHeroName;
   const bio = siteConfig?.bio || fallbackHeroBio;
   const skills = siteConfig?.skills?.length ? siteConfig.skills : heroSkills;
+  const heroImageUrl = siteConfig?.heroImageUrl;
 
   return (
     <section className="relative isolate overflow-hidden bg-bg-primary pt-[150px] pb-xl md:pt-[160px] lg:min-h-[660px] lg:pb-[30px]">
@@ -45,10 +47,16 @@ export async function HeroSection() {
             role="img"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.18)_1px,transparent_1px)] bg-[length:8px_8px] opacity-45" />
-            <div
-              className="absolute inset-0 bg-[length:1024px_660px] bg-[-94px_-352px] bg-no-repeat"
-              style={{ backgroundImage: `url(${heroReference.src})` }}
-            />
+            {heroImageUrl ? (
+              <Image
+                src={heroImageUrl}
+                alt={`${name} hero portrait`}
+                fill
+                priority
+                sizes="360px"
+                className="object-cover object-center"
+              />
+            ) : null}
           </div>
 
           <div className="max-w-[560px] pb-[2px] md:pt-[86px]">

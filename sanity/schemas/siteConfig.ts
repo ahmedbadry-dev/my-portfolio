@@ -63,6 +63,13 @@ export const siteConfig = defineType({
       options: { hotspot: true }
     }),
     defineField({
+      name: "heroImage",
+      title: "Hero Image",
+      description: "Dedicated image used only in the hero section.",
+      type: "image",
+      options: { hotspot: true }
+    }),
+    defineField({
       name: "heroSkills",
       title: "Hero Skills",
       type: "array",
