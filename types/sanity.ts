@@ -31,6 +31,7 @@ export type SiteConfig = Readonly<{
   locationLabel?: string;
   avatar?: SanityImage;
   avatarUrl?: string;
+  skills?: readonly string[];
   heroSkills?: readonly string[];
   socials?: readonly SocialLink[];
   brands?: readonly Brand[];

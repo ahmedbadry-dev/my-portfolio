@@ -101,7 +101,7 @@ export function CertificatesSection({ certificates }: CertificatesSectionProps) 
 
           <div>
             <h2 className="max-w-[620px] font-display text-[32px] leading-[1.15] font-semibold tracking-[-0.045em] text-text-primary md:text-[clamp(40px,5vw,58px)]">
-              Credentials Behind the Craft
+              The Work Speaks. The Credentials Confirm.
             </h2>
           </div>
         </div>

@@ -14,6 +14,7 @@ export const SITE_CONFIG_QUERY = groq`
     locationLabel,
     avatar,
     "avatarUrl": avatar.asset->url,
+    "skills": coalesce(skills, heroSkills),
     heroSkills,
     socials[] {
       platform,
